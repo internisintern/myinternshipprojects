@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning Path Recommender</title>
+</head>
+<body>
+    <h2>Enter Your Learning Stats</h2>
+    <form method="POST">
+        Time Spent on Videos: <input name="videos"><br>
+        Quiz Attempts: <input name="quiz_attempts"><br>
+        Quiz Score: <input name="quiz_score"><br>
+        Forum Participation: <input name="forum"><br>
+        Assignment Completion Rate: <input name="assignments"><br>
+        Final Exam Score: <input name="exam"><br>
+        Feedback Score (1-5): <input name="feedback"><br>
+        <input type="submit" value="Get Recommendation">
+    </form>
+    {% if recommendation %}
+    <h3>Recommended Course: {{ recommendation }}</h3>
+    {% endif %}
+</body>
+</html>
